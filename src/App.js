@@ -9,7 +9,7 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/shorten", { originalUrl });
+      const response = await axios.post("https://url-shortener-bcbn.onrender.com/shorten", { originalUrl });
       setShortUrl(response.data.shortUrl);
       setCopied(false);
     } catch (error) {
